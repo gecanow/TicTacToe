@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pvf-34-fbs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,708 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbo-SC-cw9">
+                                <rect key="frame" x="175" y="191" width="250" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVH-hN-6Qg" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738780424494" green="1" blue="0.038908705817462308" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwe-WH-Tfh" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="8" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF8-Ol-3Tv" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="167" y="8" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Die-AK-uDi" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="87" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-B1-9cr" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="87" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-RR-h4A" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="167" y="87" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gi8-jy-h64" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="167" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p7-ix-IZW" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="167" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmv-bH-kX7" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="167" y="167" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83006407001765425" green="1" blue="0.7893873497130639" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PSg-Qn-EBD" appends="YES" id="B8Z-4l-1Q1"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4K-eq-4NU">
+                                <rect key="frame" x="175" y="91" width="250" height="50"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="41"/>
+                                <color key="textColor" red="0.15294117647058825" green="1" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zf4-qY-h3S">
+                                <rect key="frame" x="134" y="490" width="333" height="29"/>
+                                <segments>
+                                    <segment title="1 v 1"/>
+                                    <segment title="AI: Level 1"/>
+                                    <segment title="AI: Level 2"/>
+                                    <segment title="AI: Level 3"/>
+                                </segments>
+                                <color key="tintColor" red="0.00018142738779999999" green="1" blue="0.03890870582" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="restart:" destination="BYZ-38-t0r" eventType="valueChanged" id="JqD-gm-cU0"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="xbo-SC-cw9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fQj-3z-n1x"/>
+                            <constraint firstItem="zf4-qY-h3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qWw-cJ-7Z8"/>
+                            <constraint firstItem="A4K-eq-4NU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xMG-JR-Yfs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="xbo-SC-cw9" id="3Dg-fJ-TQ5"/>
+                        <outlet property="computerPlayerLevel" destination="zf4-qY-h3S" id="cnW-VL-IRl"/>
+                        <outletCollection property="gridLabels" destination="pVH-hN-6Qg" collectionClass="NSMutableArray" id="inL-BB-JeD"/>
+                        <outletCollection property="gridLabels" destination="fwe-WH-Tfh" collectionClass="NSMutableArray" id="x24-IA-GWP"/>
+                        <outletCollection property="gridLabels" destination="jF8-Ol-3Tv" collectionClass="NSMutableArray" id="YPm-hW-mqs"/>
+                        <outletCollection property="gridLabels" destination="Die-AK-uDi" collectionClass="NSMutableArray" id="Doq-zW-wT8"/>
+                        <outletCollection property="gridLabels" destination="Ei9-B1-9cr" collectionClass="NSMutableArray" id="Wzr-x1-Op5"/>
+                        <outletCollection property="gridLabels" destination="IgJ-RR-h4A" collectionClass="NSMutableArray" id="7Th-mY-GRK"/>
+                        <outletCollection property="gridLabels" destination="Gi8-jy-h64" collectionClass="NSMutableArray" id="bsM-qs-4Tk"/>
+                        <outletCollection property="gridLabels" destination="2p7-ix-IZW" collectionClass="NSMutableArray" id="3vk-Rf-ZjD"/>
+                        <outletCollection property="gridLabels" destination="Xmv-bH-kX7" collectionClass="NSMutableArray" id="XH5-FR-RSw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PSg-Qn-EBD">
+                    <connections>
+                        <action selector="onTappedGridLabel:" destination="BYZ-38-t0r" id="Ntt-Ww-Q4b"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="2474" y="51"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="jtw-dO-BYp">
+            <objects>
+                <viewController id="7Gx-en-Oql" customClass="ThirdViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6FJ-fc-MJa"/>
+                        <viewControllerLayoutGuide type="bottom" id="7uz-oE-fLR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s4c-5C-vay">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sO1-pb-XXQ" customClass="ConnectFourBoard" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="11" y="133" width="393" height="469"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JT2-iw-eEQ" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="150" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmi-6E-u30" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="203" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCh-oa-rSh" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="203" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4W-xr-hOF" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="203" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXd-3L-nz9" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="173" y="203" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv9-9Z-80L" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="227" y="203" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JV4-vC-wt1" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="280" y="203" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyk-KY-Vrn" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="333" y="203" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wif-Xi-cGz" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="256" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApV-1i-D4e" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="256" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVJ-dT-md3" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="256" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9y-pM-ATY" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="173" y="256" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsI-VH-8je" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="227" y="256" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDP-eM-CCD" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="280" y="256" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3W-ez-U2h" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="333" y="256" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWU-Qd-TKa" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="309" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0a-ju-Dcb" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="309" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-C7-aHx" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="309" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1a-Pt-xA3" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="173" y="309" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSK-ez-dHf" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="227" y="309" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niM-og-71q" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="280" y="309" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSO-fG-vCM" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="333" y="309" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX0-FP-S0r" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="362" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lk-7B-tet" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="362" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRs-r4-jCT" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="362" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-Kq-KNP" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="173" y="362" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cub-Wb-C1e" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="227" y="362" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grr-m2-NdP" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="280" y="362" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fln-Os-0Ae" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="333" y="362" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-AP-jN7" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="415" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnh-Yu-uQx" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="415" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VF-Bz-pJi" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="415" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dur-LM-2Is" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="173" y="415" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0z-JW-hsF" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="227" y="415" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faO-Dl-YDG" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="280" y="415" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AY-Na-6CQ" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="333" y="415" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bs-JA-o4Y" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="150" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og2-op-qmy" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="150" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-Jy-dEZ" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="173" y="150" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cud-mr-gnF" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="227" y="150" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqG-AI-VZq" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="280" y="150" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTS-jV-69Y" customClass="Cell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="333" y="150" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.28323442980000002" green="0.79463840360000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-t8-wGu">
+                                        <rect key="frame" x="97" y="8" width="75" height="75"/>
+                                        <color key="backgroundColor" red="0.98431372549019602" green="0.66026875543862495" blue="0.63414445435759581" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.98431372549019602" green="0.0" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downarrow" translatesAutoresizingMaskIntoConstraints="NO" id="pwy-mn-Uws">
+                                        <rect key="frame" x="14" y="102" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downarrow" translatesAutoresizingMaskIntoConstraints="NO" id="Km5-ce-RMS">
+                                        <rect key="frame" x="67" y="102" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downarrow" translatesAutoresizingMaskIntoConstraints="NO" id="I00-aD-rf9">
+                                        <rect key="frame" x="120" y="102" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downarrow" translatesAutoresizingMaskIntoConstraints="NO" id="sCj-ck-ylv">
+                                        <rect key="frame" x="174" y="102" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downarrow" translatesAutoresizingMaskIntoConstraints="NO" id="e8O-68-jQk">
+                                        <rect key="frame" x="227" y="102" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downarrow" translatesAutoresizingMaskIntoConstraints="NO" id="h3T-s3-HMt">
+                                        <rect key="frame" x="280" y="102" width="45" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downarrow" translatesAutoresizingMaskIntoConstraints="NO" id="voy-Zf-qhM">
+                                        <rect key="frame" x="333" y="102" width="45" height="45"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wt7-Pr-wQK">
+                                        <rect key="frame" x="220" y="8" width="75" height="75"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackArow" translatesAutoresizingMaskIntoConstraints="NO" id="lTR-ff-6kz">
+                                        <rect key="frame" x="295" y="3" width="90" height="86"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redArrow" translatesAutoresizingMaskIntoConstraints="NO" id="U4X-EF-Es4">
+                                        <rect key="frame" x="22" y="8" width="75" height="75"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85751201923076914" green="0.85751201923076914" blue="0.85751201923076914" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6lA-xj-JAK" appends="YES" id="ryG-1E-iv7"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIr-dm-4Kt">
+                                <rect key="frame" x="184" y="659" width="46" height="30"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="reset:" destination="7Gx-en-Oql" eventType="touchUpInside" id="O4a-Uu-LDb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Connect Four" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biW-cd-etA">
+                                <rect key="frame" x="82" y="72" width="251" height="43"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y4y-rM-Tez">
+                                <rect key="frame" x="85" y="615" width="245" height="29"/>
+                                <segments>
+                                    <segment title="1 v 1"/>
+                                    <segment title="AI: Level 1"/>
+                                    <segment title="AI: Level 2"/>
+                                </segments>
+                                <connections>
+                                    <action selector="reset:" destination="7Gx-en-Oql" eventType="valueChanged" id="AA9-9s-UhZ"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81910817009021508" green="0.95816849312522967" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="biW-cd-etA" firstAttribute="centerX" secondItem="s4c-5C-vay" secondAttribute="centerX" id="Ied-DS-D8a"/>
+                            <constraint firstItem="y4y-rM-Tez" firstAttribute="centerX" secondItem="s4c-5C-vay" secondAttribute="centerX" id="dkf-3G-WeP"/>
+                            <constraint firstItem="QIr-dm-4Kt" firstAttribute="centerX" secondItem="s4c-5C-vay" secondAttribute="centerX" id="jVL-Rb-aiD"/>
+                            <constraint firstItem="sO1-pb-XXQ" firstAttribute="centerX" secondItem="s4c-5C-vay" secondAttribute="centerX" id="r5r-VF-VDq"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="background" destination="sO1-pb-XXQ" id="dWA-IY-reE"/>
+                        <outlet property="blackBox" destination="Wt7-Pr-wQK" id="VP2-wg-BhM"/>
+                        <outlet property="blackTurnArrow" destination="lTR-ff-6kz" id="nmJ-yk-dxu"/>
+                        <outlet property="cell1A" destination="JT2-iw-eEQ" id="vfL-c2-vj5"/>
+                        <outlet property="cell1B" destination="Rmi-6E-u30" id="kXf-4g-oxM"/>
+                        <outlet property="cell1C" destination="Wif-Xi-cGz" id="g0T-rT-e5J"/>
+                        <outlet property="cell1D" destination="CWU-Qd-TKa" id="YXP-h7-OKp"/>
+                        <outlet property="cell1E" destination="DX0-FP-S0r" id="HO4-QY-XKd"/>
+                        <outlet property="cell1F" destination="RQx-AP-jN7" id="2gA-tz-t7d"/>
+                        <outlet property="cell2A" destination="8Bs-JA-o4Y" id="3vT-hc-bym"/>
+                        <outlet property="cell2B" destination="KCh-oa-rSh" id="7OI-0g-nTV"/>
+                        <outlet property="cell2C" destination="ApV-1i-D4e" id="Br7-Hy-K0K"/>
+                        <outlet property="cell2D" destination="U0a-ju-Dcb" id="fMc-9r-G3Y"/>
+                        <outlet property="cell2E" destination="7Lk-7B-tet" id="tEa-au-az4"/>
+                        <outlet property="cell2F" destination="tnh-Yu-uQx" id="oIn-B9-mZg"/>
+                        <outlet property="cell3A" destination="og2-op-qmy" id="EX6-vZ-khc"/>
+                        <outlet property="cell3B" destination="l4W-xr-hOF" id="dGP-vW-B0l"/>
+                        <outlet property="cell3C" destination="yVJ-dT-md3" id="NBn-NV-QLw"/>
+                        <outlet property="cell3D" destination="LU7-C7-aHx" id="LZa-9C-coY"/>
+                        <outlet property="cell3E" destination="HRs-r4-jCT" id="o15-6E-xhf"/>
+                        <outlet property="cell3F" destination="0VF-Bz-pJi" id="eoe-fS-T0Q"/>
+                        <outlet property="cell4A" destination="sQ6-Jy-dEZ" id="WI6-QL-aTk"/>
+                        <outlet property="cell4B" destination="JXd-3L-nz9" id="SGw-aB-PJt"/>
+                        <outlet property="cell4C" destination="u9y-pM-ATY" id="PSb-XY-OeV"/>
+                        <outlet property="cell4D" destination="M1a-Pt-xA3" id="rak-c7-9qq"/>
+                        <outlet property="cell4E" destination="OmV-Kq-KNP" id="XSb-vh-ATl"/>
+                        <outlet property="cell4F" destination="dur-LM-2Is" id="ife-xr-81c"/>
+                        <outlet property="cell5A" destination="cud-mr-gnF" id="ULf-l8-IrB"/>
+                        <outlet property="cell5B" destination="Rv9-9Z-80L" id="8sT-Ms-1PU"/>
+                        <outlet property="cell5C" destination="wsI-VH-8je" id="rdq-MW-I4E"/>
+                        <outlet property="cell5D" destination="sSK-ez-dHf" id="EBU-Iz-bQo"/>
+                        <outlet property="cell5E" destination="cub-Wb-C1e" id="Zbq-1k-g5Y"/>
+                        <outlet property="cell5F" destination="f0z-JW-hsF" id="zrU-l0-tfZ"/>
+                        <outlet property="cell6A" destination="fqG-AI-VZq" id="kd2-Ln-XEt"/>
+                        <outlet property="cell6B" destination="JV4-vC-wt1" id="5To-87-NLl"/>
+                        <outlet property="cell6C" destination="WDP-eM-CCD" id="6rg-1Z-0YT"/>
+                        <outlet property="cell6D" destination="niM-og-71q" id="lOs-9Z-goY"/>
+                        <outlet property="cell6E" destination="Grr-m2-NdP" id="o5a-j2-Zlr"/>
+                        <outlet property="cell6F" destination="faO-Dl-YDG" id="Zi2-Hr-20O"/>
+                        <outlet property="cell7A" destination="zTS-jV-69Y" id="9HZ-t6-Vji"/>
+                        <outlet property="cell7B" destination="nyk-KY-Vrn" id="l9J-2t-Aac"/>
+                        <outlet property="cell7C" destination="I3W-ez-U2h" id="jFE-rD-zaq"/>
+                        <outlet property="cell7D" destination="hSO-fG-vCM" id="SIM-MU-DKF"/>
+                        <outlet property="cell7E" destination="Fln-Os-0Ae" id="28D-ne-0DV"/>
+                        <outlet property="cell7F" destination="5AY-Na-6CQ" id="UHz-QY-OkG"/>
+                        <outlet property="comPlayerLevel" destination="y4y-rM-Tez" id="iDL-gR-oBg"/>
+                        <outlet property="dragField" destination="6lA-xj-JAK" id="aIC-k2-m8E"/>
+                        <outlet property="redBox" destination="cOj-t8-wGu" id="3W4-de-Ndf"/>
+                        <outlet property="redTurnArrow" destination="U4X-EF-Es4" id="4ww-H3-TdE"/>
+                        <outletCollection property="dropLabels" destination="pwy-mn-Uws" collectionClass="NSMutableArray" id="w56-Ad-Hgt"/>
+                        <outletCollection property="dropLabels" destination="Km5-ce-RMS" collectionClass="NSMutableArray" id="bNI-WU-g4G"/>
+                        <outletCollection property="dropLabels" destination="I00-aD-rf9" collectionClass="NSMutableArray" id="oUT-LX-lfI"/>
+                        <outletCollection property="dropLabels" destination="sCj-ck-ylv" collectionClass="NSMutableArray" id="PpH-K0-phn"/>
+                        <outletCollection property="dropLabels" destination="e8O-68-jQk" collectionClass="NSMutableArray" id="HwD-lg-S07"/>
+                        <outletCollection property="dropLabels" destination="h3T-s3-HMt" collectionClass="NSMutableArray" id="v7a-OA-kEm"/>
+                        <outletCollection property="dropLabels" destination="voy-Zf-qhM" collectionClass="NSMutableArray" id="enG-jS-LGx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOG-Ld-3JW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="6lA-xj-JAK">
+                    <connections>
+                        <action selector="onDragged:" destination="7Gx-en-Oql" id="dvE-ua-hFY"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2474" y="798"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="BH4-qa-bED">
+            <objects>
+                <viewController id="Fs9-kL-dgD" customClass="MainViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lwg-xo-H2c"/>
+                        <viewControllerLayoutGuide type="bottom" id="5SJ-AF-Xbw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v2Y-OJ-avf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVT-dQ-48c">
+                                <rect key="frame" x="116" y="326" width="369" height="80"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <state key="normal" title="Play Connect Four!">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Gx-en-Oql" kind="show" id="heV-j0-feT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbn-Xl-ow5">
+                                <rect key="frame" x="193" y="152" width="214" height="42"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a4-gN-mhf">
+                                <rect key="frame" x="121" y="238" width="359" height="80"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <state key="normal" title="Play TicTacToe!">
+                                    <color key="titleColor" red="0.1529411765" green="1" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="3OA-r5-8Ax"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xVT-dQ-48c" firstAttribute="centerX" secondItem="v2Y-OJ-avf" secondAttribute="centerX" id="6hr-LU-YJX"/>
+                            <constraint firstItem="4a4-gN-mhf" firstAttribute="centerX" secondItem="v2Y-OJ-avf" secondAttribute="centerX" id="fui-Z0-cXa"/>
+                            <constraint firstItem="nbn-Xl-ow5" firstAttribute="centerX" secondItem="v2Y-OJ-avf" secondAttribute="centerX" id="ppE-7J-8Nv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4hS-Fu-9h7"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="nbn-Xl-ow5" id="5fd-aD-ZE9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKl-kQ-WQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="309"/>
+        </scene>
+        <!--Opening View Controller-->
+        <scene sceneID="HKO-aZ-78U">
+            <objects>
+                <viewController id="L17-vU-TBx" customClass="OpeningViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u5J-ZT-HRg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ncX-jG-xkt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jcr-WI-gSW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4m-m8-BiB">
+                                <rect key="frame" x="156" y="260" width="289" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tw-g9-xTX">
+                                <rect key="frame" x="250" y="310" width="100" height="32"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="21"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="Fs9-kL-dgD" kind="show" id="Ze5-fT-dOq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Tw-g9-xTX" firstAttribute="centerX" secondItem="Jcr-WI-gSW" secondAttribute="centerX" id="RMn-PQ-eiw"/>
+                            <constraint firstItem="g4m-m8-BiB" firstAttribute="centerX" secondItem="Jcr-WI-gSW" secondAttribute="centerX" id="anG-pW-G8o"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mx4-fg-uo7"/>
+                    <connections>
+                        <outlet property="nameField" destination="g4m-m8-BiB" id="S61-sU-gc5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phx-eY-JXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="309"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qS2-mZ-pZ1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pvf-34-fbs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TKi-15-igN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L17-vU-TBx" kind="relationship" relationship="rootViewController" id="wQq-8t-9mR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9x-Rz-zZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="309"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blackArow" width="512" height="512"/>
+        <image name="downarrow" width="307" height="400"/>
+        <image name="redArrow" width="1902" height="2000"/>
+    </resources>
 </document>

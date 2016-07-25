@@ -14,6 +14,12 @@
 		8827B4681D413D9B0045E887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8827B4661D413D9B0045E887 /* LaunchScreen.storyboard */; };
 		8827B4731D413D9B0045E887 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827B4721D413D9B0045E887 /* TicTacToeTests.swift */; };
 		8827B47E1D413D9B0045E887 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827B47D1D413D9B0045E887 /* TicTacToeUITests.swift */; };
+		8827B48C1D413F360045E887 /* GridLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827B48B1D413F360045E887 /* GridLabel.swift */; };
+		8827B74D1D4295BA007035BC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827B74C1D4295BA007035BC /* ThirdViewController.swift */; };
+		8827B74F1D42A244007035BC /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827B74E1D42A244007035BC /* Cell.swift */; };
+		8827B7531D42D69D007035BC /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827B7521D42D69D007035BC /* Chip.swift */; };
+		8827B7551D446B91007035BC /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827B7541D446B91007035BC /* OpeningViewController.swift */; };
+		8827B7571D446CFE007035BC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827B7561D446CFE007035BC /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		8827B4791D413D9B0045E887 /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8827B47D1D413D9B0045E887 /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		8827B47F1D413D9B0045E887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8827B48B1D413F360045E887 /* GridLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLabel.swift; sourceTree = "<group>"; };
+		8827B74C1D4295BA007035BC /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdViewController.swift; path = ../ThirdViewController.swift; sourceTree = "<group>"; };
+		8827B74E1D42A244007035BC /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		8827B7521D42D69D007035BC /* Chip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chip.swift; path = ../Chip.swift; sourceTree = "<group>"; };
+		8827B7541D446B91007035BC /* OpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
+		8827B7561D446CFE007035BC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				8827B45D1D413D9B0045E887 /* AppDelegate.swift */,
+				8827B7541D446B91007035BC /* OpeningViewController.swift */,
+				8827B7561D446CFE007035BC /* MainViewController.swift */,
 				8827B45F1D413D9B0045E887 /* ViewController.swift */,
+				8827B74C1D4295BA007035BC /* ThirdViewController.swift */,
+				8827B74E1D42A244007035BC /* Cell.swift */,
+				8827B7521D42D69D007035BC /* Chip.swift */,
+				8827B48B1D413F360045E887 /* GridLabel.swift */,
 				8827B4611D413D9B0045E887 /* Main.storyboard */,
 				8827B4641D413D9B0045E887 /* Assets.xcassets */,
 				8827B4661D413D9B0045E887 /* LaunchScreen.storyboard */,
@@ -256,8 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8827B48C1D413F360045E887 /* GridLabel.swift in Sources */,
+				8827B7531D42D69D007035BC /* Chip.swift in Sources */,
+				8827B7551D446B91007035BC /* OpeningViewController.swift in Sources */,
 				8827B4601D413D9B0045E887 /* ViewController.swift in Sources */,
+				8827B74F1D42A244007035BC /* Cell.swift in Sources */,
+				8827B74D1D4295BA007035BC /* ThirdViewController.swift in Sources */,
 				8827B45E1D413D9B0045E887 /* AppDelegate.swift in Sources */,
+				8827B7571D446CFE007035BC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +508,7 @@
 				8827B4841D413D9B0045E887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8827B4851D413D9B0045E887 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +517,7 @@
 				8827B4871D413D9B0045E887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8827B4881D413D9B0045E887 /* Build configuration list for PBXNativeTarget "TicTacToeUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +526,7 @@
 				8827B48A1D413D9B0045E887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
