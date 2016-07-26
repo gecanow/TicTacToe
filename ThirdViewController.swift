@@ -18,7 +18,9 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var blackBox: UILabel!
     var redChip : Chip!
     var blackChip : Chip!
+    var chipStr = ["r", "b"]
     
+    @IBOutlet weak var boardImage: UIImageView!
     @IBOutlet weak var redTurnArrow: UIImageView!
     @IBOutlet weak var blackTurnArrow: UIImageView!
     var fadedAlpha = CGFloat(0.2)
@@ -108,10 +110,12 @@ class ThirdViewController: UIViewController {
         
         board = [rowSix, rowFive, rowFour, rowThree, rowTwo, rowOne]
         
-        redChip = createNewChip("redChipImage", place: redBox.center, color: "r")
-        blackChip = createNewChip("blackChipImage", place: blackBox.center, color: "b")
+        redTurn = true
+        redChip = createNewChip("redChipImage", place: redBox.center, color: chipStr[0])
+        blackChip = createNewChip("blackChipImage", place: blackBox.center, color: chipStr[1])
         
         blackTurnArrow.alpha = fadedAlpha
+        redTurnArrow.alpha = 1.0
     }
     
     //==================================================
@@ -178,13 +182,6 @@ class ThirdViewController: UIViewController {
                     movable!.canMove = false
                     cell.isEmpty = false
                     cell.chipReference = movable
-                
-                    // now assign redChip/blackChip to a new chip
-                    if redTurn {
-                        redChip = createNewChip("redChipImage", place: redBox.center, color: "r")
-                    } else {
-                        blackChip = createNewChip("blackChipImage", place: blackBox.center, color: "b")
-                    }
                 }
                 return checkMe
             }
@@ -212,14 +209,7 @@ class ThirdViewController: UIViewController {
                 } else if self.checkForStalemate() {
                     self.presentWinAlert("Tie")
                 } else {
-                    self.redTurn = !self.redTurn
-                    if self.redTurn {
-                        self.blackTurnArrow.alpha = self.fadedAlpha
-                        self.redTurnArrow.alpha = 1.0
-                    } else {
-                        self.blackTurnArrow.alpha = 1.0
-                        self.redTurnArrow.alpha = self.fadedAlpha
-                    }
+                    self.updatePlayerTurn(!self.redTurn)
                     
                     if self.comPlayerLevel.selectedSegmentIndex > 0 && !self.redTurn {
                         self.comPlayer()
@@ -234,13 +224,35 @@ class ThirdViewController: UIViewController {
     //==================================================
     func createNewChip(name: String, place: CGPoint, color: String) -> Chip {
         let newChip = Chip(image: UIImage(named: name))
-        newChip.frame.size = CGSize(width: 42, height: 42)
+        newChip.frame.size = CGSize(width: 45, height: 45)
         newChip.center = place
         background.addSubview(newChip)
         background.bringSubviewToFront(newChip)
+        background.bringSubviewToFront(boardImage)
         newChip.colorStr = color
         
         return newChip
+    }
+    
+    //==================================================
+    // Handles switching from red to black
+    // or the other way around
+    //==================================================
+    func updatePlayerTurn(isRed: Bool) {
+        redTurn = isRed
+        
+        if redTurn {
+            blackTurnArrow.alpha = self.fadedAlpha
+            redTurnArrow.alpha = 1.0
+            
+            blackChip = createNewChip("blackChipImage", place: blackBox.center, color: chipStr[1])
+        } else {
+            redTurnArrow.alpha = self.fadedAlpha
+            blackTurnArrow.alpha = 1.0
+            
+            redChip = createNewChip("redChipImage", place: redBox.center, color: chipStr[0])
+        }
+        
     }
     
     //==================================================
@@ -254,10 +266,10 @@ class ThirdViewController: UIViewController {
                 cell.chipReference = nil
             }
         }
-        redTurn = true
         
-        redTurnArrow.alpha = 1.0
-        blackTurnArrow.alpha = fadedAlpha
+        blackChip?.removeFromSuperview()
+        redChip?.removeFromSuperview()
+        self.viewDidLoad()
     }
     
     // THE FOLLOWING DEALS WITH WINNING
@@ -319,8 +331,8 @@ class ThirdViewController: UIViewController {
     
     //==================================================
     // Evaluates the board:
-    // Tests for four-in-a-row, three-in-a-row, and
-    // two-in-a-row horizontally, vertically, and
+    // Tests for 4-in-a-row, 3-in-a-row, and
+    // 2-in-a-row horizontally, vertically, and
     // diagonally
     //==================================================
     func evaluateBoard() {
@@ -402,23 +414,12 @@ class ThirdViewController: UIViewController {
         
         movable = blackChip
         
-        // LEVEL TWO: Based on the board evaluation
         if comPlayerLevel.selectedSegmentIndex > 1 {
-            var nextStepIndex = 0
-            var nextStepRank = testFakeChip("b", col: 0)
-        
-            for i in 1..<dropLabels.count {
-                let temp = testFakeChip("b", col: i)
-                if (temp != nil && temp < nextStepRank) || (nextStepRank == nil) {
-                    nextStepRank = temp
-                    nextStepIndex = i
-                }
-            }
-            
+            // LEVEL ONE/TWO: Based on the board evaluation
+            let nextStepIndex = bestNextMoveFor("b", position: comPlayerLevel.selectedSegmentIndex - 1)[0]
             fallDown(nextStepIndex, makeMove: true)
-        }
-        // LEVEL ONE: pick a random column
-        else {
+        } else {
+            // LEVEL ZERO: pick a random column
             var column : Int!
             repeat {
                 column = Int(arc4random_uniform(UInt32(board.count)))
@@ -444,7 +445,7 @@ class ThirdViewController: UIViewController {
     // into the column specified and return a value 
     // based on how good that move was
     //==================================================
-    func testFakeChip(color: String, col: Int) -> Int? {
+    func testFakeChip(color: String, col: Int, level: Int) -> Int? {
         
         let row = fallDown(col, makeMove: false)
         
@@ -456,8 +457,14 @@ class ThirdViewController: UIViewController {
             board[row][col].chipReference = newChip
             board[row][col].isEmpty = false
             
-            // check for ranking
-            let ranking = determineRank()
+            // Instantiate a ranking variable
+            var ranking = determineRank()
+            
+            // if level > 2 (and i don't have a winning
+            // move), test 7 more "chips"
+            if level > 1 && ranking != -1000000 && ranking != 1000000 {
+                ranking = bestNextMoveFor(chipStr[level % 2], position: level - 1)[1]
+            }
             
             // finally, remove the temporary chip and return the ranking
             board[row][col].isEmpty = true
@@ -465,8 +472,33 @@ class ThirdViewController: UIViewController {
             
             return ranking
         }
-        
         return nil
+    }
+    
+    //==================================================
+    // Returns the best next move for a
+    // given color, color
+    //==================================================
+    func bestNextMoveFor(color: String, position: Int) -> [Int] {
+        var num = 1, mult = -1
+        
+        if color == "r" {
+            num = 0
+            mult = 1
+        }
+        
+        var index = 3
+        var rankAtIndex = testFakeChip(chipStr[num], col: 3, level: position)
+        
+        for i in 0..<dropLabels.count {
+            let temp = testFakeChip(chipStr[num], col: i, level: position)
+            if (temp != nil && rankAtIndex != nil && temp! * mult > rankAtIndex! * mult) || (rankAtIndex == nil) {
+                rankAtIndex = temp
+                index = i
+            }
+        }
+        
+        return [index, rankAtIndex!]
     }
     
 }

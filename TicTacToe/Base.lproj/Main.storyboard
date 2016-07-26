@@ -491,6 +491,9 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redArrow" translatesAutoresizingMaskIntoConstraints="NO" id="U4X-EF-Es4">
                                         <rect key="frame" x="22" y="8" width="75" height="75"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="board2" translatesAutoresizingMaskIntoConstraints="NO" id="DZA-GL-Xfa">
+                                        <rect key="frame" x="11" y="150" width="371" height="311"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85751201923076914" green="0.85751201923076914" blue="0.85751201923076914" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -512,11 +515,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y4y-rM-Tez">
-                                <rect key="frame" x="85" y="615" width="245" height="29"/>
+                                <rect key="frame" x="53" y="610" width="309" height="29"/>
                                 <segments>
                                     <segment title="1 v 1"/>
                                     <segment title="AI: Level 1"/>
                                     <segment title="AI: Level 2"/>
+                                    <segment title="AI: Level 3"/>
                                 </segments>
                                 <connections>
                                     <action selector="reset:" destination="7Gx-en-Oql" eventType="valueChanged" id="AA9-9s-UhZ"/>
@@ -536,6 +540,7 @@
                         <outlet property="background" destination="sO1-pb-XXQ" id="dWA-IY-reE"/>
                         <outlet property="blackBox" destination="Wt7-Pr-wQK" id="VP2-wg-BhM"/>
                         <outlet property="blackTurnArrow" destination="lTR-ff-6kz" id="nmJ-yk-dxu"/>
+                        <outlet property="boardImage" destination="DZA-GL-Xfa" id="2WB-tc-11f"/>
                         <outlet property="cell1A" destination="JT2-iw-eEQ" id="vfL-c2-vj5"/>
                         <outlet property="cell1B" destination="Rmi-6E-u30" id="kXf-4g-oxM"/>
                         <outlet property="cell1C" destination="Wif-Xi-cGz" id="g0T-rT-e5J"/>
@@ -717,6 +722,7 @@
     </scenes>
     <resources>
         <image name="blackArow" width="512" height="512"/>
+        <image name="board2" width="350" height="300"/>
         <image name="downarrow" width="307" height="400"/>
         <image name="redArrow" width="1902" height="2000"/>
     </resources>
